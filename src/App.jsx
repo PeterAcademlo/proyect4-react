@@ -1,3 +1,4 @@
+import "../src/style/UserCard.css"
 import { useState, useEffect } from 'react'
 import './App.css'
 import useUserCrud from './hooks/useUserCrud'

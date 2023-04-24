@@ -1,4 +1,4 @@
-import "../style/UserCard.css"
+import "../src/style/UserCard.css"
 
 const UserCard = ({ user, deleteUserByTd, setUpdateinfo }) => {
     const handleDelete = () => {
