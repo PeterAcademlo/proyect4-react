@@ -7,6 +7,7 @@ import FormUser from './components/FormUser'
 function App() {
 
   const [updateinfo, setUpdateinfo] = useState()
+  const [formclose, setformclose] = useState(true)
 
 
  
@@ -23,17 +24,26 @@ function App() {
   }, [])
 
 
+    const handleOPenForm = () => {
+      setformclose(false)
+    }
+
   return (
     
       <div className='App'>
-        <h1>USER</h1>
-        <FormUser
+        <header className="app_header">
+          <h1 className='app-title'>USERS</h1>
+          <button onClick={handleOPenForm} className="app_btn">create new user <i class='bx bx-add-to-queue'></i></button>
+        </header>
+         <FormUser
           createNewUser={createNewUser}
           updateinfo={updateinfo}
           updateUsrId={updateUsrId}
           setUpdateinfo={setUpdateinfo}
+          setformclose={setformclose}
+          formclose={formclose}
         />
-        <div>
+        <div className="user-container">
           {
             users?.map(user =>(
               <UserCard
@@ -41,6 +51,7 @@ function App() {
               user={user}
               deleteUserByTd={deleteUserByTd}
               setUpdateinfo={setUpdateinfo}
+              
               />
             ))
           }

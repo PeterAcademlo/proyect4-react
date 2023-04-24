@@ -4,7 +4,7 @@ import {useForm} from "react-hook-form"
 import defaultValues from '../utils/defaultValues'
 import { useEffect } from 'react'
 
-const FormUser = ({ createNewUser, updateinfo, updateUsrId, setUpdateinfo }) => {
+const FormUser = ({ createNewUser, updateinfo, updateUsrId, setUpdateinfo, setformclose, formclose }) => {
 
     const {register, handleSubmit, reset} = useForm()
 
@@ -24,31 +24,43 @@ const FormUser = ({ createNewUser, updateinfo, updateUsrId, setUpdateinfo }) => 
         reset(defaultValues)
     }
 
+    const handleExit = () => {
+      setformclose(true)
+    }
+
+    const handleExit2 = () => {
+      setformclose(true)
+    }
+
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input {...register("email")} type="email" id="email" />
+    <div className={`form_container ${formclose && 'close'}`}>
+      <form className='form' onSubmit={handleSubmit(submit)}>
+        <h3 className='form_title'>{updateinfo ? 'UPDATE USER INFO.' : 'CREATE NEW USER' }</h3>
+        <span onClick={handleExit} className="form_exit">x</span>
+      <div className='form_item'>
+        <label className='form_label' htmlFor="email">Email</label>
+        <input className='form_input' {...register("email")} type="email" id="email" />
       </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input {...register("password")} type="password" id="password" />
+      <div className='form_item'>
+        <label className='form_label' htmlFor="password">Password</label>
+        <input className='form_input' {...register("password")} type="password" id="password" />
       </div>
-      <div>
-        <label htmlFor="first_name">First Name</label>
-        <input {...register("first_name")} type="text" id="first_name" />
+      <div className='form_item'>
+        <label className='form_label' htmlFor="first_name">First Name</label>
+        <input className='form_input' {...register("first_name")} type="text" id="first_name" />
       </div>
-      <div>
-        <label htmlFor="last_name">Last Name</label>
-        <input {...register("last_name")} type="text" id="last_name" />
+      <div className='form_item'>
+        <label className='form_label' htmlFor="last_name">Last Name</label>
+        <input className='form_input' {...register("last_name")} type="text" id="last_name" />
       </div>
-      <div>
-        <label htmlFor="birthday">Birthdat</label>
-        <input {...register("birthday")} type="date" id="birthday" />
+      <div className='form_item'>
+        <label className='form_label' htmlFor="birthday">Birthdat</label>
+        <input className='form_input' {...register("birthday")} type="date" id="birthday" />
       </div>
-      <button>{updateinfo ? 'update' : 'create' }</button>
+      <button onClick={handleExit2} className='form_btn'>{updateinfo ? 'update' : 'create' }</button>
     </form>
+    </div>
   )
 }
 

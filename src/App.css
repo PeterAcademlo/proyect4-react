@@ -1,9 +1,148 @@
+.App{
+    padding: 2rem 1.5rem;
+    min-width: 310px;
+}
+
+.app_header{
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: space-between;
+}
+
+.app_title{
+    font-weight: 600;
+}
+
+.app_btn{
+    background-color: gray;
+    color: aliceblue;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 200ms ease;
+}
+.app_btn:hover{
+    transform: scale(1.05);
+    filter: brightness(1.15);
+}
+
+/*--form user--- */
+
+.form_container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 200ms ease;
+}
+
+.close{
+    transform: scale(0);
+}
+
+.form{
+    background-color: aliceblue;
+    width: 100%;
+    min-width: 300px;
+    max-width: 330px;
+    padding: 2rem 1.5rem 2.5rem;
+    border-radius:1rem ;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.form_title{
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.form_exit{
+    position: absolute;
+    right: .5rem;
+    top: .3rem;
+    cursor: pointer;
+    text-align: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s, background-color .2s;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.form_exit:hover{
+    background-color: red;
+    border: 1px solid rgb(255, 255, 255);
+    transition: transform .3s;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transform: scale(1.1) ;
+}
+
+.form_item{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.form_label{
+    font-size: .7rem;
+    padding-left: 1rem;
+}
+
+.form_input{
+    padding: 0.2rem 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+.form_btn{
+    padding: 0.5rem 1rem;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-weight: 500;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    transition: transform .3s;
+}
+.form_btn:hover{
+    transform: scale(1.02);
+}
+
+
+/* container*/
+
+.user-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
 .user{
     border:0.05em solid gray;
     width: 100%;
+    min-width: 265px;
     max-width: 320px;
     border-radius: .4em;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: white;
+    transition: transform 200ms ease;
+    
+}
+
+.user:hover{
+    transform: scale(1.03);
 }
 
 .user_name{
@@ -47,6 +186,7 @@
     aspect-ratio: 1;
     border-radius: .4rem;
     transition: transform 200ms ease, box-shadow 0.2s;
+    filter: brightness(1.1)
 }
 .user_btn:hover{
     transform: scale(1.1);
