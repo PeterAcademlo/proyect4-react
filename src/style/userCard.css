@@ -1,0 +1,71 @@
+.user{
+    border:0.05em solid gray;
+    width: 100%;
+    max-width: 320px;
+    border-radius: .4em;
+    padding: 1rem;
+}
+
+.user_name{
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.user_list{
+    display: grid;
+    gap: 0.5em;
+    margin-bottom: 1rem;
+}
+
+.user_item{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.user_label{
+    font-size: .7rem;
+    color: gray;
+    text-decoration: uppercase;
+    position: relative;
+    left: 1.5rem;
+}
+
+.user_value{
+    font-size: .8rem;
+}
+
+.user_footer{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.user_btn{
+    width: 2.5em;
+    aspect-ratio: 1;
+    border-radius: .4rem;
+    transition: transform 200ms ease, box-shadow 0.2s;
+}
+.user_btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.user_delete{
+    color: aliceblue;
+    background: red;
+}
+
+.user_update{
+    color: gray;
+    border: 0.1em solid currentColor;
+}
+
+.user-icon{
+    font-size: 1.2rem;
+}
+
+
+
