@@ -1,22 +1,26 @@
 .App{
-    padding: 2rem 1.5rem;
+    padding: 2rem 3rem;
     min-width: 310px;
 }
 
 .app_header{
     display: flex;
-    margin-bottom: 1em;
+    margin-bottom: 6em;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
-.app_title{
-    font-weight: 600;
+.app-title{
+    font-weight: 700;
+    padding-right: 1rem;
 }
 
 .app_btn{
+    min-width: 120px;
     background-color: gray;
     color: aliceblue;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.9rem;
     border-radius: 0.5rem;
     transition: transform 200ms ease;
 }
